@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllSafe - Система Управления Заказами</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
+    <div class="container">
+        <a class="navbar-brand" th:href="@{/user/}">AllSafe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/user/}">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/user/telephone}">Контакты</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" th:action="@{/logout}" th:method="POST">
+                <button class="btn btn-sm btn-outline-secondary" type="submit" value="Logout">Выход</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container pt-3">
+    <div class="info-section">
+        <h1>Разработчик Сайта</h1>
+        <p class="support-phone">ФИО: Токар Кирилл Игоревич</p>
+        <p class="support-phone">Номер телефона: 123-456-789</p>
+        <img src="" alt="Изображение службы поддержки" class="support-image">
+    </div>
+    <div class="info-section">
+        <h2>Дополнительная Информация</h2>
+        <p>Я, Кирилл Игоревич Токар, являюсь опытным веб-разработчиком, специализирующимся на создании интуитивно понятных и функциональных веб-сайтов и приложений. Стремлюсь к инновациям и постоянному совершенствованию в области технологий, что позволяет мне предлагать современные решения для моих клиентов.</p>
+        <p>Мой опыт охватывает широкий спектр технологий, включая HTML5, CSS3, JavaScript, а также фреймворки, такие как Angular и Vue.js. Я также имею опыт работы с серверными технологиями, включая Node.js и Express, и базами данных, такими как MongoDB и MySQL.</p>
+        <p>Как разработчик, я ценю чистый код, внимание к деталям и лучшие практики проектирования. Я постоянно ищу новые вызовы и возможности для профессионального роста и сотрудничества на интересных проектах.</p>
+        <p>Если у вас есть вопросы или вы хотите обсудить ваш проект, пожалуйста, свяжитесь со мной.</p>
+    </div>
+</div>
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
+

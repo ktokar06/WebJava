@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ Панель</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
+    <div class="container">
+        <a class="navbar-brand" th:href="@{/admin/}">AllSafe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/admin/}">Главная</a>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" th:action="@{/logout}" th:method="POST">
+                <button class="btn btn-sm btn-outline-secondary" type="submit" value="Logout">Выход</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container pt-3">
+    <h1>Панель управления администратора</h1>
+    <div class="row pt-3">
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Заказы</div>
+                <div class="card-body">
+                    <p class="card-text">Просмотр и управление  заказов клиентов.</p>
+                    <a th:href="@{/admin/orders/}" class="btn btn-light">Перейти к заказам</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-header">Поиск Заказов</div>
+                <div class="card-body">
+                    <p class="card-text">Просмотр заказов клиентов.</p>
+                    <a href="admincomplaints" class="btn btn-light">Перейти к заказам</a>
+                </div>
+            </div>
+        </div>
+        <!-- Панель персонала -->
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-header">Персонал</div>
+                <div class="card-body">
+                    <p class="card-text">Управление информацией о сотрудниках.</p>
+                    <a href="adminstaff" class="btn btn-light">Перейти к персоналу</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
